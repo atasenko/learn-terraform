@@ -11,3 +11,6 @@ personal.auto.tfvars
 
 # IDE folders
 .idea
+
+# VirtualBox
+*.virtualbox.box

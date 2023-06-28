@@ -1,3 +1,4 @@
+## Задание 1
 ### Изучил .gitignore  
 Личную, секретную информацию следует сохранять в файле personal.auto.tfvars  
 
@@ -21,3 +22,7 @@
 
 ### Образ nginx:latest не был удален по причине наличия ключа keep_locally = true
 ![proof](img/keep_locally.png)
+
+## Задание 2*
+[terraform plan](VB/tf-plan.txt)
+![VB VM](img/tf-vb.png)
