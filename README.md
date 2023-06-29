@@ -24,5 +24,5 @@
 ![proof](img/keep_locally.png)
 
 ## Задание 2*
-[terraform plan](VB/tf-plan.txt)
+[terraform plan](01/VB/tf-plan.txt)
 ![VB VM](img/tf-vb.png)
