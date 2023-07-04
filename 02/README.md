@@ -20,3 +20,8 @@ resource "yandex_compute_instance" "platform"
 ## Задание 2  
 ![all_is_ok](../img/tf_plan_with_vars.png)
 
+## Задание 3  
+![db_is_here](../img/tf-web-db.png)
+
+### Задание 4  
+![ips_here](../img/tf-output.png)
