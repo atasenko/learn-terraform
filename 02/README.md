@@ -4,7 +4,7 @@ main.tf
 resource "yandex_compute_instance" "platform"
 - platform_id = "standart-v4"  
 У Yandex Cloud доступно всего 3 стандартных платформы и слово standart пишется как standard. Исправляю на standard-v1.  
-- cores = 1
+- cores = 1  
 Минимально допустимое количество ядер - 2.  
 
 ### Значение параметров:  
@@ -16,4 +16,7 @@ resource "yandex_compute_instance" "platform"
 ### Пруфы Terraform.  
 ![vm_is_ready](../img/tf-vm-done.png)
 ![ssh_is_ok](../img/tf-ssh-done.png)
+
+## Задание 2  
+![all_is_ok](../img/tf_plan_with_vars.png)
 
