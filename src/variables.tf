@@ -31,40 +31,14 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
-variable "vm_web_image_name" {
-  type        = string
-  default     = "ubuntu-2004-lts"
-  description = "VPC image name"
+variable "env" {
+  type = string
+  default = "develop"
 }
 
-variable "vm_web_instance_name" {
-  type        = string
-  default     = "netology-develop-platform-web"
-  description = "Instance name"
-}
-
-variable "vm_web_platform_id" {
-  type        = string
-  default     = "standard-v1"
-  description = "Yandex Cloud platform id"
-}
-
-variable "vm_web_cpu_cores" {
-  type        = number
-  default     = 2
-  description = "VM CPU cores"
-}
-
-variable "vm_web_memory" {
-  type        = number
-  default     = 1
-  description = "VM RAM in Gb"
-}
-
-variable "vm_web_core_fraction" {
-  type        = number
-  default     = 5
-  description = "Core fraction"
+variable "project" {
+  type = string
+  default = "platform"
 }
 
 ###ssh vars
