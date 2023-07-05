@@ -31,3 +31,13 @@ resource "yandex_compute_instance" "platform"
 
 ### Задание 6  
 Далеко не сразу, но получилось.  
+
+### Задание 7  
+1. Какой командой отобразить второй элемент списка test_list?  
+local.test_list[1]  
+2. Длина списка test_list  
+length(local.test_list)  
+3. Отобразить значение ключа admin из map test_map  
+local.test_map.admin
+4. Interpolation выражение  
+"${local.test_map.admin} is admin for ${local.test_list[2]} server based on OS ${local.servers.production.image} with ${local.servers.production.cpu} vcpu, ${local.servers.production.ram} ram and ${length(local.servers.production.disks)} virtual disks"
