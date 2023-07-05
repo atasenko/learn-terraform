@@ -27,3 +27,7 @@ resource "yandex_compute_instance" "platform"
 ![ips_here](img/tf-output.png)
 
 ### Задание 5  
+Выполнено.
+
+### Задание 6  
+Далеко не сразу, но получилось.  
