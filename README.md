@@ -1,28 +1,27 @@
-## Задание 1
-### Изучил .gitignore  
-Личную, секретную информацию следует сохранять в файле personal.auto.tfvars  
+## Задание 1  
+### Ошибки:  
+main.tf
+resource "yandex_compute_instance" "platform"
+- platform_id = "standart-v4"  
+У Yandex Cloud доступно всего 3 стандартных платформы и слово standart пишется как standard. Исправляю на standard-v1.  
+- cores = 1  
+Минимально допустимое количество ядер - 2.  
 
-### Выполнил код проекта, содержимое ресурса random_password получилось следующим:  
-"result": "uvPk872AT0hft2lQ"
+### Значение параметров:  
+- preemptible = true  
+Делает виртуальную машину "прерываемой". Такая ВМ дешевле стоит, а кроме того, автоматически остановится спустя 24 часа работы или может быть принудительно выключена в случае нехватки ресурсов в той же зоне доступности.  
+- core_fraction=5  
+Задает минимальный гарантированный уровень производительности используемых ядер CPU. При значении 5 ВМ будет иметь доступ к физическим ядрам как минимум 5% времени. Подходит для нетребовательных к ресурсам и задержкам ВМ. Всё что меньше 100 стоит дешевле.  
 
-### Ошибки в main.tf:  
-- resource "docker_image" не хватает второго label, пишем "nginx"  
-- resource "docker_container" опечатка в том же втором ярлыке, правим на "nginx"  
-- атрибут name здесь же приводим в соответствие с ресурсом "random_password"  
+### Пруфы Terraform.  
+![vm_is_ready](../img/tf-vm-done.png)
+![ssh_is_ok](../img/tf-ssh-done.png)
 
-### Выполняю код "sudo terraform apply"  
-![proof](img/tf-docker.png)  
+## Задание 2  
+![all_is_ok](../img/tf_plan_with_vars.png)
 
-### Меняю имя контейнера на hello-world, запускаю с -auto-approve:  
-Опасность использования ключа -auto-approve может быть в том что terraform не запрашивает подтверждения и в процессе выполнения могут быть удалены какие-то ценные ресурсы.  
-![hello-world](img/hello-world.png)  
+## Задание 3  
+![db_is_here](../img/tf-web-db.png)
 
-### Уничтожаю всё!  
-![tfstate](img/tfstate.png)  
-
-### Образ nginx:latest не был удален по причине наличия ключа keep_locally = true
-![proof](img/keep_locally.png)
-
-## Задание 2*
-[terraform plan](01/VB/tf-plan.txt)
-![VB VM](img/tf-vb.png)
+### Задание 4  
+![ips_here](../img/tf-output.png)
