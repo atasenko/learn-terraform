@@ -28,23 +28,40 @@ variable "default_cidr" {
 variable "vpc_name" {
   type        = string
   default     = "develop"
-  description = "VPC network & subnet name"
+  description = "VPC network&subnet name"
 }
 
-variable "env" {
-  type = string
-  default = "develop"
-}
-
-variable "project" {
-  type = string
-  default = "platform"
-}
-
-###ssh vars
-
-variable "vms_ssh_root_key" {
+variable "vm_image_name" {
   type        = string
-  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBbXwu94fyLxHhhIEt1sxmIhJoaxHQOobnzuoQVu4DlF fenixad@gmail.com"
-  description = "ssh-keygen -t ed25519"
+  default     = "ubuntu-2004-lts"
+  description = "VPC image name"
+}
+
+variable "vm_for_resources" {
+  description = "Resource list for task 2"
+  type = map(any)
+
+  default = {
+    main = {
+      vm_name       = "main"
+      description   = "Main virtual machine"
+      cores         = 4
+      ram           = 2
+      core_fraction = 20
+      disk          = 20
+    },
+    replica = {
+      vm_name       = "replica"
+      description   = "Replica virtual machine"
+      cores         = 2
+      ram           = 1
+      core_fraction = 5
+      disk          = 10
+    }
+  }
+}
+
+variable "vm_web_resources" {
+  type = map(number)
+  default  = { cores = "2", memory = "2", core_fraction = "5" }
 }

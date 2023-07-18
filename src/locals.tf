@@ -1,4 +1,3 @@
 locals {
-  web = "netology-${ var.env }-${ var.project }-web"
-  db = "netology-${ var.env }-${ var.project }-db"
+  ssh-key = "ubuntu:${file("~/.ssh/id_ed25519.pub")}"
 }
