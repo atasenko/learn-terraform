@@ -20,7 +20,9 @@
 ![VM`s done](img/tf3-t2-done.png)  
 
 ### Задание 3  
-
+Три одинаковых диска и ВМ с ними созданы в файле [disk_vm.tf](src/disk_vm.tf)  
+Машина создана  
+![Storage VM](img/tf3-t3-storage.png)  
 
 ### Задание 4  
 
