@@ -1,6 +1,7 @@
 ### Задание 1  
 Проект инициализирован, выполнен, вот скриншот созданных правил Групп безопасности:  
-![Security rules](img/tf3-t1.png)  
+![Security rules ingress](img/tf3-t1.png)  
+![Security rules egress](img/tf3-t1_2.png)  
 
 ### Задание 2  
 #### 1  
