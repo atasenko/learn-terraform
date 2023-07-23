@@ -29,3 +29,7 @@
 В файле [ansible.tf](src/ansible.tf) создал inventory-файл для ansible. IP отличаются от вывода предыдущих заданий, т.к. делались в разное время.  
 На выходе получен [hosts.cfg](src/hosts.cfg) и его скриншот:  
 ![hosts.cfg](img/tf3-t4.png)
+
+### Задание 5  
+Далеко не сразу, но написал [output](src/output.tf) отображающий все 5 созданных ВМ в виде списка словарей:  
+![output.tf](img/tf3-t5-output.png)
