@@ -6,6 +6,7 @@ resource "yandex_compute_disk" "storage" {
 
 resource "yandex_compute_instance" "storage" {
   name        = "storage"
+
   resources {
     cores         = var.vm_web_resources.cores
     memory        = var.vm_web_resources.memory

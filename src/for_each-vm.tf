@@ -1,7 +1,7 @@
-resource "yandex_compute_instance" "web-vm-for-loop" {
+resource "yandex_compute_instance" "databases" {
   for_each = var.vm_for_resources
   name = "${each.value.vm_name}"
-  depends_on  = [yandex_compute_instance.web-vm-count]
+  depends_on  = [yandex_compute_instance.webservers]
 
   resources {
     cores = "${each.value.cores}"

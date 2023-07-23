@@ -25,9 +25,6 @@
 ![Storage VM](img/tf3-t3-storage.png)  
 
 ### Задание 4  
-
-
-### Задание 5  
-  
-
-### Задание 6  
+В файле [ansible.tf](src/ansible.tf) создал inventory-файл для ansible. IP отличаются от вывода предыдущих заданий, т.к. делались в разное время.  
+На выходе получен [hosts.cfg](src/hosts.cfg) и его скриншот:  
+![hosts.cfg](img/tf3-t4.png)

@@ -1,6 +1,7 @@
-resource "yandex_compute_instance" "web-vm-count" {
+resource "yandex_compute_instance" "webservers" {
   count       = 2
   name        = "web-${count.index+1}"
+
   resources {
     cores         = var.vm_web_resources.cores
     memory        = var.vm_web_resources.memory
