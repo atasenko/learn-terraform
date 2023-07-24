@@ -8,10 +8,6 @@
 Создан файл [count-vm.tf](src/count-vm.tf) создающий две одинаковые машины с именами web-1 и web-2, назначена сделанная в первом задании группа безопасности.  
 #### 2  
 В файле [for_each-vm.tf](src/for_each-vm.tf) описано создание еще двух разных ВМ с именами main и replica используя мета-аргумент for_each loop. Общая переменная - vm_for_resources в файле [variables.tf](src/variables.tf)  
-Я пытался, но, к сожалению, не осилил создать переменную типа list. Даже IDE была не против, но terraform стоял на своем и каждый раз при запуске terraform plan выдавал следующую ошибку:  
-![No list, map or set only](img/tf3-t2-error.png)
-Подкрепляю выдержкой из [документации](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)  
-![Doc](img/tf3-t2-doc.png)
 #### 3  
 ВМ из пункта 2.2 будут создаваться после ВМ из 2.1 благодаря мета-аргументу depends_on  
 #### 4  

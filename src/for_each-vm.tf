@@ -1,13 +1,15 @@
 resource "yandex_compute_instance" "databases" {
-  for_each = var.vm_for_resources
-  name = each.value.vm_name
-  depends_on  = [yandex_compute_instance.webservers]
+  for_each = {
+    for i, vm in var.vm_for_resources : vm.name => vm
+    }
+  name       = each.value.name
+  depends_on = [yandex_compute_instance.webservers]
 
   resources {
     cores = each.value.cores
     memory = each.value.ram
     core_fraction = each.value.core_fraction
-  }
+    }
 
   boot_disk {
     initialize_params {

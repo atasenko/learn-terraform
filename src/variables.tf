@@ -39,26 +39,25 @@ variable "vm_image_name" {
 
 variable "vm_for_resources" {
   description = "Resource list for task 2"
-  type = map(any)
-
-  default = {
-    main = {
-      vm_name       = "main"
+  type = list(any)
+  default = [
+    {
+      name          = "main"
       description   = "Main virtual machine"
       cores         = 4
       ram           = 2
       core_fraction = 20
       disk          = 20
     },
-    replica = {
-      vm_name       = "replica"
+    {
+      name          = "replica"
       description   = "Replica virtual machine"
       cores         = 2
       ram           = 1
       core_fraction = 5
       disk          = 10
     }
-  }
+  ]
 }
 
 variable "vm_web_resources" {
