@@ -1,0 +1,64 @@
+➜  src git:(terraform-04) ✗ terraform import "module.vpc_develop.yandex_vpc_network.vpc" enp6hb1bnvp4ahtos5sp
+data.template_file.ssh_public_key: Reading...
+data.template_file.ssh_public_key: Read complete after 0s [id=199dc1321efd03f61b9d89a5ea47a2e6f37e9da7d2465d3fdd842d9637f28d9a]
+module.vpc_develop.yandex_vpc_network.vpc: Importing from ID "enp6hb1bnvp4ahtos5sp"...
+module.test-vm.data.yandex_compute_image.my_image: Reading...
+module.vpc_develop.yandex_vpc_network.vpc: Import prepared!
+  Prepared yandex_vpc_network for import
+module.vpc_develop.yandex_vpc_network.vpc: Refreshing state... [id=enp6hb1bnvp4ahtos5sp]
+module.test-vm.data.yandex_compute_image.my_image: Read complete after 2s [id=fd8h5v894psivbl4t2dn]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+➜  src git:(terraform-04) ✗ terraform state list
+data.template_file.ssh_public_key
+module.test-vm.data.yandex_compute_image.my_image
+module.vpc_develop.yandex_vpc_network.vpc
+
+➜  src git:(terraform-04) ✗ terraform import "module.vpc_develop.yandex_vpc_subnet.vpc_sub" e9bkp2l0rcje8vfpcj32
+data.template_file.ssh_public_key: Reading...
+data.template_file.ssh_public_key: Read complete after 0s [id=199dc1321efd03f61b9d89a5ea47a2e6f37e9da7d2465d3fdd842d9637f28d9a]
+module.test-vm.data.yandex_compute_image.my_image: Reading...
+module.vpc_develop.yandex_vpc_subnet.vpc_sub: Importing from ID "e9bkp2l0rcje8vfpcj32"...
+module.vpc_develop.yandex_vpc_subnet.vpc_sub: Import prepared!
+  Prepared yandex_vpc_subnet for import
+module.vpc_develop.yandex_vpc_subnet.vpc_sub: Refreshing state... [id=e9bkp2l0rcje8vfpcj32]
+module.test-vm.data.yandex_compute_image.my_image: Read complete after 5s [id=fd8h5v894psivbl4t2dn]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+➜  src git:(terraform-04) ✗ terraform state list
+data.template_file.ssh_public_key
+module.test-vm.data.yandex_compute_image.my_image
+module.vpc_develop.yandex_vpc_network.vpc
+module.vpc_develop.yandex_vpc_subnet.vpc_sub
+
+➜  src git:(terraform-04) ✗ terraform import "module.test-vm.yandex_compute_instance.vm[0]" fhmpc7iektgrnfarrn9g
+data.template_file.ssh_public_key: Reading...
+data.template_file.ssh_public_key: Read complete after 0s [id=199dc1321efd03f61b9d89a5ea47a2e6f37e9da7d2465d3fdd842d9637f28d9a]
+module.test-vm.data.yandex_compute_image.my_image: Reading...
+module.test-vm.data.yandex_compute_image.my_image: Read complete after 2s [id=fd8h5v894psivbl4t2dn]
+module.test-vm.yandex_compute_instance.vm[0]: Importing from ID "fhmpc7iektgrnfarrn9g"...
+module.test-vm.yandex_compute_instance.vm[0]: Import prepared!
+  Prepared yandex_compute_instance for import
+module.test-vm.yandex_compute_instance.vm[0]: Refreshing state... [id=fhmpc7iektgrnfarrn9g]
+
+Import successful!
+
+The resources that were imported are shown above. These resources are now in
+your Terraform state and will henceforth be managed by Terraform.
+
+➜  src git:(terraform-04) ✗ terraform state list
+data.template_file.ssh_public_key
+module.test-vm.data.yandex_compute_image.my_image
+module.test-vm.yandex_compute_instance.vm[0]
+module.vpc_develop.yandex_vpc_network.vpc
+module.vpc_develop.yandex_vpc_subnet.vpc_sub
+
+➜  src git:(terraform-04) ✗
