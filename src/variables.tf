@@ -25,7 +25,7 @@ variable "default_cidr" {
   description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
 }
 
-variable "vpc_name" {
+variable "env_name" {
   type        = string
   default     = "develop"
   description = "VPC network&subnet name"
